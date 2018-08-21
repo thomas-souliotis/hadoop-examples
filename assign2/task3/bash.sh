@@ -1,0 +1,2 @@
+hadoop jar /opt/hadoop/hadoop-2.7.3/share/hadoop/tools/lib/hadoop-streaming-2.7.3.jar -files mapper.py,reducer.py -input 'inputFile' -output 'outputFile1' -mapper mapper.py -reducer reducer.py && hadoop jar /opt/hadoop/hadoop-2.7.3/share/hadoop/tools/lib/hadoop-streaming-2.7.3.jar -D mapreduce.job.reduces=1 -files mapper2.py,reducer2.py -input 'outputFile1' -output 'outputFile2' -mapper mapper2.py -reducer reducer2.py
+
